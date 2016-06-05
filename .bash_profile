@@ -7,4 +7,4 @@ export TERM=xterm-256color
 # green: 32
 STARTCOLOR='\e[0;93m';
 ENDCOLOR="\e[0m"
-export PS1="$STARTCOLOR\u@\h \w> $ENDCOLOR"
+export PS1="$STARTCOLOR\u@\h \w $ENDCOLOR\n$ "

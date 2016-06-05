@@ -16,6 +16,7 @@ export PS1="$STARTCOLOR\u@\h \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$
 alias suw="ssh swifties@vergil.u.washington.edu"
 
 # Git stuff
+alias init="git init"
 alias push="git push origin master"
 alias pull="git pull origin master"
 alias s="echo 'git status' && git status"
@@ -23,6 +24,9 @@ alias add="git add $@"
 alias addall="git add ."
 alias commit="git commit -m "$@""
 alias commitall="git commit -am "$@""
+alias remote="git remote -v"
+alias addo="echo 'git remote add origin' & git remote add origin $@"
+alias seto="echo 'git remote set-url origin' & git remote set-url origin $@"
 
 # Quality of Life
 alias sbash="source ~/.bash_profile"

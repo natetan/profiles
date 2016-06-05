@@ -21,8 +21,8 @@ alias pull="git pull origin master"
 alias s="echo 'git status' && git status"
 alias add="git add $@"
 alias addall="git add ."
-alias commit="git commit -m '$@'"
-alias commitall="git commit -am '$@'"
+alias commit="git commit -m "$@""
+alias commitall="git commit -am "$@""
 
 # Quality of Life
 alias sbash="source ~/.bash_profile"
@@ -31,3 +31,8 @@ alias vhistory="vim ~/.bash_history"
 alias vvim="vim ~/.vimrc"
 alias up="cd .."
 alias copy="clip <$@"
+alias update="cp ~/.bash_profile ~/profiles/"
+alias transfer="cp ~/profiles/.bash_profile ~"
+
+# Grades
+alias grade="cat ~/Documents/UW/uwgrades.csv | grep -i "$@""

@@ -11,3 +11,7 @@ STARTCOLOR='\e[0;93m';
 ENDCOLOR="\e[0m"
 # export PS1="$STARTCOLOR\u@\h \w $ENDCOLOR\n$ "
 export PS1="$STARTCOLOR\u@\h \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]$ENDCOLOR\n$ "
+alias suw="ssh swifties@vergil.u.washington.edu"
+alias push="git push origin master"
+alias pull="git pull origin master"
+alias commit="git commit -m "$@""

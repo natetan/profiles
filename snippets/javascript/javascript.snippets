@@ -8,7 +8,7 @@ snippet proto
 # Function
 snippet fun
 	function ${1:function_name}(${2}) {
-		${0}
+		${3}
 	}
 # Anonymous Function
 snippet f "" w
@@ -236,11 +236,11 @@ snippet gett
 snippet by.
 	${1:document}.getElementsByClassName('${0:class}')
 # Element by ID
-snippet by#
-	${1:document}.getElementById('${0:element ID}')
+snippet id
+	${1:document}.getElementById('${2:element ID}')${3}
 # Query selector
 snippet qs
-	${1:document}.querySelector('${0:CSS selector}')
+	${1:document}.querySelector('${2:CSS selector}')${3}
 # Query selector all
 snippet qsa
 	${1:document}.querySelectorAll('${0:CSS selector}')
@@ -249,7 +249,7 @@ snippet qsa
 snippet de
 	debugger;
 # console.log
-snippet cl
+snippet log
 	console.log(${0});
 # console.debug
 snippet cd
@@ -289,3 +289,5 @@ snippet jstemp
 			${1}
 		};
 	}) ();
+snippet doc
+	document.${1}

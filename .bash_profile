@@ -17,8 +17,9 @@ alias suw="ssh swifties@vergil.u.washington.edu"
 
 # Git stuff
 alias init="git init"
-alias push="git push origin master"
 alias pull="git pull origin master"
+alias push="git push origin master"
+alias pushall="git add . && git commit -m "$@" && git push origin master"
 alias s="echo 'git status' && git status"
 alias add="git add $@"
 alias addall="git add ."

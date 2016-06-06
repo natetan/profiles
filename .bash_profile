@@ -37,6 +37,8 @@ alias up="cd .."
 alias copy="clip <$@"
 alias update="cp ~/.bash_profile ~/profiles/"
 alias transfer="cp ~/profiles/.bash_profile ~"
+alias updatesnips="cp -r ~/.vim/bundle/vim-snippets/snippets ~/profiles/"
+alias transfersnips="cp -r ~/profiles/snippets ~/.vim/bundle/vim-snippets/"
 
 # Grades
 alias grade="cat ~/Documents/UW/uwgrades.csv | grep -i "$@""

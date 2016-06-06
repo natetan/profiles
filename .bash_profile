@@ -39,6 +39,9 @@ alias save="cp ~/.bash_profile ~/profiles/"
 alias update="cp ~/profiles/.bash_profile ~"
 alias savesnips="cp -r ~/.vim/bundle/vim-snippets/snippets ~/profiles/"
 alias updatesnips="cp -r ~/profiles/snippets ~/.vim/bundle/vim-snippets/"
+alias home="start ~"
+alias music="start ~/Music"
+alias uw="start ~/Documents/UW"
 
 # Grades
 alias grade="cat ~/Documents/UW/uwgrades.csv | grep -i "$@""

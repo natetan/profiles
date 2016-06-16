@@ -51,6 +51,7 @@ alias marveld="cd /d/marvel"
 alias marvel="cd ~/marvel"
 alias imagesd="cd /d/images"
 alias images="cd ~/images"
+alias mongo="cd /c/MongoDB/Server/3.2/bin"
 
 # Grades
 alias grade="cat ~/Documents/UW/uwgrades.csv | grep -i "$@""

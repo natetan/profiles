@@ -55,3 +55,8 @@ alias mongo="cd /c/MongoDB/Server/3.2/bin"
 
 # Grades
 alias grade="cat ~/Documents/UW/uwgrades.csv | grep -i "$@""
+
+#bg
+alias updatebamboo="scp -r bgadmin@bamboo-garden.co:/home/bgadmin/bamboogarden.net ~"
+alias savebamboo="scp -r ~/bamboogarden.net bgadmin@bamboo-garden.co:/home/bgadmin"
+alias sbamboo="ssh bgadmin@bamboo-garden.co"

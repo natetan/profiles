@@ -7,10 +7,17 @@ export TERM=xterm-256color
 # light-red: 91
 # light-yellow: 93
 # green: 32
-STARTCOLOR='\e[0;93m';
+
+# Prompt info
+# \u - username
+# \h - hostname (computer name)
+# \w - working directory (full path)
+# \@ is the 12 hour time
+
+STARTCOLOR='\e[0;91m';
 ENDCOLOR="\e[0m"
 # End color is not necessary here, bc I'm coloring the entire prompt
-export PS1="$STARTCOLOR\u@\h \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]$ENDCOLOR\n$ "
+export PS1="$STARTCOLOR\u@\h [\@] \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]$ENDCOLOR\n$"
 
 # Logins
 alias suw="ssh swifties@vergil.u.washington.edu"

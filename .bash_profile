@@ -3,10 +3,14 @@ export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 export TERM=xterm-256color
 
-# Fav colors:
+# Colors:
 # light-red: 91
 # light-yellow: 93
+# light-blue: 94
+# light-magenta: 95
 # green: 32
+# blue: 34
+# cyan: 36
 
 # Prompt info
 # \u - username
@@ -14,10 +18,10 @@ export TERM=xterm-256color
 # \w - working directory (full path)
 # \@ is the 12 hour time
 
-STARTCOLOR='\e[0;91m';
+STARTCOLOR='\e[0;95m';
 ENDCOLOR="\e[0m"
 # End color is not necessary here, bc I'm coloring the entire prompt
-export PS1="$STARTCOLOR\u@\h [\@] \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]$ENDCOLOR\n$"
+export PS1="$STARTCOLOR\u@\h [\@] \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]$ENDCOLOR\n$ "
 
 # Logins
 alias suw="ssh swifties@vergil.u.washington.edu"

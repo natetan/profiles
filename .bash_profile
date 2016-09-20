@@ -4,7 +4,10 @@ source "${GITAWAREPROMPT}/main.sh"
 export TERM=xterm-256color
 
 # Colors:
+# Color format: \e[ (start color), 0;[code]m, \e[m (end color)
+
 # light-red: 91
+# light-green: 92
 # light-yellow: 93
 # light-blue: 94
 # light-magenta: 95
@@ -18,10 +21,18 @@ export TERM=xterm-256color
 # \w - working directory (full path)
 # \@ is the 12 hour time
 
-STARTCOLOR='\e[0;95m';
-ENDCOLOR="\e[0m"
+# Color for the name
+COLOR1='\e[0;94m';
+# Color for the @
+COLOR2='\e[0;93m';
+#Color for the host / pc name
+COLOR3='\e[0;95m';
+#Color for the directory
+COLOR4='\e[0;91m';
+# All start colors must have an end
+ENDCOLOR='\e[m';
 # End color is not necessary here, bc I'm coloring the entire prompt
-export PS1="$STARTCOLOR\u@\h [\@] \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]$ENDCOLOR\n$ "
+export PS1="$COLOR1\u$ENDCOLOR$COLOR2@$ENDCOLOR$COLOR3\h$ENDCOLOR $COLOR4\w$ENDCOLOR \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n$ "
 
 # Logins
 alias suw="ssh swifties@vergil.u.washington.edu"

@@ -25,14 +25,16 @@ export TERM=xterm-256color
 COLOR1='\e[0;94m';
 # Color for the @
 COLOR2='\e[0;93m';
-#Color for the host / pc name
+# Color for the host / pc name
 COLOR3='\e[0;95m';
-#Color for the directory
+# Color for the directory
 COLOR4='\e[0;91m';
-# All start colors must have an end
+# Color for the commands
+COLOR5='\e[0;92m';
+# Where the color ends
 ENDCOLOR='\e[m';
 # End color is not necessary here, bc I'm coloring the entire prompt
-export PS1="$COLOR1\u$ENDCOLOR$COLOR2@$ENDCOLOR$COLOR3\h$ENDCOLOR $COLOR4\w$ENDCOLOR \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n$ "
+export PS1="$COLOR1\u$ENDCOLOR$COLOR2@$ENDCOLOR$COLOR3\h$ENDCOLOR $COLOR4\w$ENDCOLOR \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n$COLOR5$ "
 
 # Logins
 alias suw="ssh swifties@vergil.u.washington.edu"

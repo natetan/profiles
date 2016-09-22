@@ -11,6 +11,7 @@ export TERM=xterm-256color
 # light-yellow: 93
 # light-blue: 94
 # light-magenta: 95
+
 # green: 32
 # blue: 34
 # cyan: 36
@@ -33,8 +34,7 @@ COLOR4='\e[0;91m';
 COLOR5='\e[0;92m';
 # Where the color ends
 ENDCOLOR='\e[m';
-# End color is not necessary here, bc I'm coloring the entire prompt
-export PS1="$COLOR1\u$ENDCOLOR$COLOR2@$ENDCOLOR$COLOR3\h$ENDCOLOR $COLOR4\w$ENDCOLOR \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n$COLOR5$ "
+export PS1="$COLOR1\u$ENDCOLOR$COLOR2@$ENDCOLOR$COLOR3\h$ENDCOLOR $COLOR4\w$ENDCOLOR \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n$ "
 
 # Logins
 alias suw="ssh swifties@vergil.u.washington.edu"
@@ -80,7 +80,7 @@ alias mongo="cd /c/MongoDB/Server/3.2/bin"
 # Grades
 alias grade="cat ~/Documents/UW/uwgrades.csv | grep -i "$@""
 
-#bg
+# bg
 alias updatebamboo="scp -r bgadmin@bamboo-garden.co:/home/bgadmin/bamboogarden.net ~"
 alias savebamboo="scp -r ~/bamboogarden.net bgadmin@bamboo-garden.co:/home/bgadmin"
 alias sbamboo="ssh bgadmin@bamboo-garden.co"

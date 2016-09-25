@@ -34,7 +34,7 @@ COLOR4='\e[0;91m';
 COLOR5='\e[0;92m';
 # Where the color ends
 ENDCOLOR='\e[m';
-export PS1="$COLOR1\u$ENDCOLOR$COLOR2@$ENDCOLOR$COLOR3\h$ENDCOLOR $COLOR4\w$ENDCOLOR \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n$ "
+export PS1="$COLOR1\u$ENDCOLOR$COLOR2@$ENDCOLOR$COLOR3\h$ENDCOLOR $COLOR4\w$ENDCOLOR \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]$COLOR5\n$ "
 
 # Logins
 alias suw="ssh swifties@vergil.u.washington.edu"

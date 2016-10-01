@@ -78,6 +78,7 @@ alias images="cd ~/images"
 alias mongo="cd /c/MongoDB/Server/3.2/bin"
 alias remove="rm -rf $@"
 alias ls="ls --color=always -Gpa"
+alias gitaware= "mkdir ~/.bash && cd~/.bash && git clone git://github.com/jimeh/git-aware-prompt.git"
 
 # Grades
 alias grade="cat ~/Documents/UW/uwgrades.csv | grep -i "$@""

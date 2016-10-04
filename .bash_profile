@@ -52,7 +52,7 @@ alias remote="git remote -v"
 alias addo="echo 'git remote add origin' & git remote add origin $@"
 alias seto="echo 'git remote set-url origin' & git remote set-url origin $@"
 alias gitemail="echo 'git config --global user.email' && git config --global user.email $@"
-alias gitname="echo 'git config --global user.name' && git config --global.user.name $@"
+alias gitname="echo 'git config --global user.name' && git config --global user.name $@"
 
 # Quality of Life
 alias sbash="source ~/.bash_profile"

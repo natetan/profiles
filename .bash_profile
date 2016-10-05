@@ -87,6 +87,10 @@ alias profiles="cd ~/profiles"
 alias colors="cd ~/.vim/colors"
 alias colorlist="ls ~/.vim/colors"
 
+# Vim
+alias fixvimplugins="git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugin/Vundle.vim"
+alias getvimswift="git clone git://github.com/toyamarinyon/vim-swift.git ~/.vim/bundle/vim-swift"
+
 # Grades
 alias grade="cat ~/Documents/UW/uwgrades.csv | grep -i "$@""
 

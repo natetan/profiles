@@ -86,6 +86,7 @@ alias gitaware="mkdir ~/.bash && cd ~/.bash && git clone git://github.com/jimeh/
 alias profiles="cd ~/profiles"
 alias colors="cd ~/.vim/colors"
 alias colorlist="ls ~/.vim/colors"
+alias editorconfig="cp ~/profiles/.editorconfig ."
 
 # Vim
 alias fixvimplugins="git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugin/Vundle.vim"

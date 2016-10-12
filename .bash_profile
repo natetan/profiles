@@ -31,7 +31,7 @@ COLOR3='\e[0;95m';
 # Color for the directory
 COLOR4='\e[0;91m';
 # Color for the commands
-COLOR5='\e[0;92m';
+COLOR5='\e[0;32m';
 # Where the color ends
 ENDCOLOR='\e[m';
 export PS1="$COLOR1\u$ENDCOLOR$COLOR2@$ENDCOLOR$COLOR3\h$ENDCOLOR $COLOR4\w$ENDCOLOR \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]$COLOR5\n$ "
@@ -64,6 +64,8 @@ alias prev="cd -"
 alias copy="clip <$@"
 alias save="cp ~/.bash_profile ~/profiles/"
 alias update="cp ~/profiles/.bash_profile ~"
+alias savevimrc="cp ~/.vimrc ~/profiles"
+alias updatevimrc="cp ~/profiles/.vimrc ~"
 alias savesnips="cp -r ~/.vim/bundle/vim-snippets/snippets ~/profiles/.vim"
 alias updatesnips="cp -r ~/profiles/.vim/snippets ~/.vim/bundle/vim-snippets/"
 alias savecolors="cp -r ~/.vim/colors/ ~/profiles/.vim"
@@ -81,7 +83,7 @@ alias imagesd="cd /d/images"
 alias images="cd ~/images"
 alias mongo="cd /c/MongoDB/Server/3.2/bin"
 alias remove="rm -rf $@"
-alias ls="ls --color=always -Gpav"
+alias ls="ls -Gpav"
 alias gitaware="mkdir ~/.bash && cd ~/.bash && git clone git://github.com/jimeh/git-aware-prompt.git"
 alias profiles="cd ~/profiles"
 alias colors="cd ~/.vim/colors"

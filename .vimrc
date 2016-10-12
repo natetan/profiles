@@ -9,6 +9,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'toyamarinyon/vim-swift'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -48,7 +49,7 @@ set shiftwidth=4
 
 " this makes colors work
 set t_Co=256
-colorscheme fx
+colorscheme adventurous
 
 highlight LineNr ctermfg=cyan
 highlight Comment ctermfg=cyan

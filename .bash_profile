@@ -84,15 +84,17 @@ alias images="cd ~/images"
 alias mongo="cd /c/MongoDB/Server/3.2/bin"
 alias remove="rm -rf $@"
 alias ls="ls -Gpav --color=always"
-alias gitaware="mkdir ~/.bash && cd ~/.bash && git clone git://github.com/jimeh/git-aware-prompt.git"
+alias gitaware="git clone git://github.com/jimeh/git-aware-prompt.git ~/.bash"
 alias profiles="cd ~/profiles"
 alias colors="cd ~/.vim/colors"
 alias colorlist="ls ~/.vim/colors"
 alias editorconfig="cp ~/profiles/.editorconfig ."
+alias newpcconfig="gitaware && updatevimrc && updatecolors && getvimswift && fixvimplugs && plugs"
 
 # Vim
 alias fixvimplugins="git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugin/Vundle.vim"
 alias getvimswift="git clone git://github.com/toyamarinyon/vim-swift.git ~/.vim/bundle/vim-swift"
+alias plugs="vim +PluginInstall qall"
 
 # Grades
 alias grade="cat ~/Documents/UW/uwgrades.csv | grep -i "$@""

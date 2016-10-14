@@ -89,7 +89,7 @@ alias profiles="cd ~/profiles"
 alias colors="cd ~/.vim/colors"
 alias colorlist="ls ~/.vim/colors"
 alias editorconfig="cp ~/profiles/.editorconfig ."
-alias newpcconfig="gitaware && updatevimrc && updatecolors && getvimswift && fixvimplugs && plugs"
+alias newpcconfig="gitaware && updatevimrc && getvimswift && gitemail && gitname && fixvimplugins && updacolors && plugs"
 
 # Vim
 alias fixvimplugins="git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugin/Vundle.vim"

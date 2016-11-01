@@ -31,7 +31,7 @@ COLOR3='\e[0;95m';
 # Color for the directory
 COLOR4='\e[0;91m';
 # Color for the commands
-COLOR5='\e[0;32m';
+COLOR5='\e[0;92m';
 # Where the color ends
 ENDCOLOR='\e[m';
 export PS1="$COLOR1\u$ENDCOLOR$COLOR2@$ENDCOLOR$COLOR3\h$ENDCOLOR $COLOR4\w$ENDCOLOR \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]$COLOR5\n$ "
@@ -51,8 +51,8 @@ alias commitall="git commit -am "$@""
 alias remote="git remote -v"
 alias addo="echo 'git remote add origin' & git remote add origin $@"
 alias seto="echo 'git remote set-url origin' & git remote set-url origin $@"
-alias gitemail="echo 'git config --global user.email' && git config --global user.email yulongtan67@gmail.com"
-alias gitname="echo 'git config --global user.name' && git config --global user.name 'Yulong Tan'"
+alias gitemail="echo 'git config --global user.email' && git config --global user.email $@"
+alias gitname="echo 'git config --global user.name' && git config --global user.name $@"
 
 # Quality of Life
 alias sbash="source ~/.bash_profile"
@@ -64,8 +64,6 @@ alias prev="cd -"
 alias copy="clip <$@"
 alias save="cp ~/.bash_profile ~/profiles/"
 alias update="cp ~/profiles/.bash_profile ~"
-alias savevimrc="cp ~/.vimrc ~/profiles"
-alias updatevimrc="cp ~/profiles/.vimrc ~"
 alias savesnips="cp -r ~/.vim/bundle/vim-snippets/snippets ~/profiles/.vim"
 alias updatesnips="cp -r ~/profiles/.vim/snippets ~/.vim/bundle/vim-snippets/"
 alias savecolors="cp -r ~/.vim/colors/ ~/profiles/.vim"
@@ -83,18 +81,17 @@ alias imagesd="cd /d/images"
 alias images="cd ~/images"
 alias mongo="cd /c/MongoDB/Server/3.2/bin"
 alias remove="rm -rf $@"
-alias ls="ls -Gpav --color=always"
-alias gitaware="git clone git://github.com/jimeh/git-aware-prompt.git ~/.bash/git-aware-prompt"
+alias ls="ls --color=always -Gpav"
+alias gitaware="mkdir ~/.bash && cd ~/.bash && git clone git://github.com/jimeh/git-aware-prompt.git"
 alias profiles="cd ~/profiles"
 alias colors="cd ~/.vim/colors"
 alias colorlist="ls ~/.vim/colors"
 alias editorconfig="cp ~/profiles/.editorconfig ."
-alias newpcconfig="gitaware && updatevimrc && getvimswift && gitemail && gitname && fixvimplugins && updatecolors && plugs"
+alias htmlstart="cp ~/profiles/index.html ."
 
 # Vim
 alias fixvimplugins="git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugin/Vundle.vim"
 alias getvimswift="git clone git://github.com/toyamarinyon/vim-swift.git ~/.vim/bundle/vim-swift"
-alias plugs="vim +PluginInstall qall"
 
 # Grades
 alias grade="cat ~/Documents/UW/uwgrades.csv | grep -i "$@""

@@ -1,7 +1,7 @@
 # Vim Profiles
 ## Profiles to use on different computers. Nothing special here
 ### Prompt
-```VimL
+```Shell
 # Colors:
 # Color format: \e[ (start color), 0;[code]m, \e[m (end color)
 

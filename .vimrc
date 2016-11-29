@@ -30,6 +30,7 @@ Plugin 'garbas/vim-snipmate'
 
 " Optional:
 Plugin 'honza/vim-snippets'
+Plugin 'itspriddle/vim-jquery'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,13 +51,13 @@ filetype plugin indent on    " required
 set number
 syntax enable
 filetype indent on
-set tabstop=4
+set tabstop=2
 filetype plugin on
 set showmatch
 set ruler
 set autochdir
 set showcmd
-set shiftwidth=4
+set shiftwidth=2
 
 " this makes colors work
 set t_Co=256

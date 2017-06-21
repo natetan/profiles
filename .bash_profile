@@ -2,28 +2,32 @@
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 export TERM=xterm-256color
+export PATH=/usr/local/bin:$PATH
 
 # Colors:
 # Color format: \e[ (start color), 0;[code]m, \e[m (end color)
+
+# green: 32
+# blue: 34
+# cyan: 36
 
 # light-red: 91
 # light-green: 92
 # light-yellow: 93
 # light-blue: 94
 # light-magenta: 95
-
-# green: 32
-# blue: 34
-# cyan: 36
+# light-cyan: 96
 
 # Prompt info
 # \u - username
 # \h - hostname (computer name)
+# Hostname buggy
+# Replacement: $(scutil --get ComputerName) <- terminal commnd that gets pc name
 # \w - working directory (full path)
 # \@ is the 12 hour time
 
 # Color for the name
-COLOR1='\e[0;94m';
+COLOR1='\e[0;36m';
 # Color for the @
 COLOR2='\e[0;93m';
 # Color for the host / pc name
@@ -31,19 +35,26 @@ COLOR3='\e[0;95m';
 # Color for the directory
 COLOR4='\e[0;91m';
 # Color for the commands
-COLOR5='\e[0;32m';
+COLOR5='\e[0;92m';
 # Where the color ends
 ENDCOLOR='\e[m';
-export PS1="\n$COLOR1\u$ENDCOLOR$COLOR2@$ENDCOLOR$COLOR3\h$ENDCOLOR $COLOR4\w$ENDCOLOR \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]$COLOR5\n$ "
+export PS1="$COLOR1\u$ENDCOLOR$COLOR2@$ENDCOLOR$COLOR3\$(scutil --get ComputerName)$ENDCOLOR $COLOR4\w$ENDCOLOR \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]$COLOR5\n$ "
 
 # Logins
 alias suw="ssh swifties@vergil.u.washington.edu"
 
 # Git stuff
+# Git alias example in terminal
+# git config --global alias.s status 
+	# this means git s = git status
+# git config --global alias.civ commit -v
+	# this means git civ = git commit -v
 alias init="git init"
-alias pull="git pull origin master"
-alias push="git push origin master"
-alias s="echo 'git status' && git status"
+alias pull="git pull origin $@"
+alias push="git push origin $@"
+alias newbranch="git checkout -b "$@""
+alias branch="git checkout "$@""
+alias branches="git branch -r"
 alias add="git add $@"
 alias addall="git add ."
 alias commit="git commit -m "$@""
@@ -72,10 +83,11 @@ alias savecolors="cp -r ~/.vim/colors/ ~/profiles/.vim"
 alias updatecolors="cp -r ~/profiles/.vim/colors ~/.vim"
 alias home="start ~"
 alias music="start ~/Music"
-alias uw="cd ~/Documents/UW"
+alias uw="cd ~/uw"
 alias dev="cd ~/dev"
 alias webs="cd ~/dev/webs"
-alias cse154="cd ~/Documents/UW/Sophomore/Winter/cse154"
+alias cse154="cd ~/uw/sophomore/winter/cse154"
+alias cse143="cd ~/uw/sophomore/winter/cse143"
 alias card="cd /d"
 alias marveld="cd /d/marvel"
 alias marvel="cd ~/marvel"
@@ -83,7 +95,7 @@ alias imagesd="cd /d/images"
 alias images="cd ~/images"
 alias mongo="cd /c/MongoDB/Server/3.2/bin"
 alias remove="rm -rf $@"
-alias ls="ls -Gpav --color=always"
+alias ls="ls -Gpav"
 alias gitaware="git clone git://github.com/jimeh/git-aware-prompt.git ~/.bash/git-aware-prompt"
 alias profiles="cd ~/profiles"
 alias colors="cd ~/.vim/colors"
@@ -91,6 +103,12 @@ alias colorlist="ls ~/.vim/colors"
 alias editorconfig="cp ~/profiles/.editorconfig ."
 alias newpcconfig="gitaware && updatevimrc && getvimswift && gitemail && gitname && fixvimplugins && updatecolors && plugs"
 alias htmlstart="cp ~/profiles/index.html ."
+alias desk="cd ~/Desktop"
+alias restart="sudo shutdown -r now"
+alias getname="scutil --get $@"
+alias sub="sublime $@"
+alias remindLoop="echo 'for i in {1..10}; do touch test${i}.txt; done'"
+alias clean="remove ~/Desktop/*.png"
 
 # Vim
 alias fixvimplugins="git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugin/Vundle.vim"
@@ -98,9 +116,16 @@ alias getvimswift="git clone git://github.com/toyamarinyon/vim-swift.git ~/.vim/
 alias plugs="vim +PluginInstall qall"
 
 # Grades
-alias grade="cat ~/Documents/UW/uwgrades.csv | grep -i "$@""
+alias grade="cat ~/uw/uwgrades.csv | grep -i "$@""
 
 # bg
 alias updatebamboo="scp -r bgadmin@bamboo-garden.co:/home/bgadmin/bamboogarden.net ~"
 alias savebamboo="scp -r ~/bamboogarden.net bgadmin@bamboo-garden.co:/home/bgadmin"
 alias sbamboo="ssh bgadmin@bamboo-garden.co"
+
+
+
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export PATH=$PATH:/Users/yulong/Library/Android/sdk/platform-tools/
+eval $(/usr/libexec/path_helper -s)

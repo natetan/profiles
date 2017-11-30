@@ -4,6 +4,9 @@ source "${GITAWAREPROMPT}/main.sh"
 export TERM=xterm-256color
 export PATH=/usr/local/bin:$PATH
 
+# First bit is foreground color, second is background color
+export LSCOLORS="Fxexcxdxbxegedabagacad"
+
 # Colors:
 # Color format: \e[ (start color), 0;[code]m, \e[m (end color)
 
@@ -129,3 +132,11 @@ alias sbamboo="ssh bgadmin@bamboo-garden.co"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH=$PATH:/Users/yulong/Library/Android/sdk/platform-tools/
 eval $(/usr/libexec/path_helper -s)
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
+
+# added by Anaconda3 5.0.1 installer
+export PATH="/Users/yulong/anaconda3/bin:$PATH"

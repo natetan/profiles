@@ -47,7 +47,7 @@ export PS1="$COLOR1\u$ENDCOLOR$COLOR2@$ENDCOLOR$COLOR3\$(scutil --get ComputerNa
 alias suw="ssh swifties@vergil.u.washington.edu"
 
 #zsh
-alias getzsh="sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)""
+alias getzsh="sh -c '$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)'"
 alias removezsh="uninstall_oh_my_zsh"
 
 # Powerline Fonts

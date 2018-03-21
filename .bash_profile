@@ -46,6 +46,13 @@ export PS1="$COLOR1\u$ENDCOLOR$COLOR2@$ENDCOLOR$COLOR3\$(scutil --get ComputerNa
 # Logins
 alias suw="ssh swifties@vergil.u.washington.edu"
 
+#zsh
+alias getzsh="sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)""
+alias removezsh="uninstall_oh_my_zsh"
+
+# Powerline Fonts
+alias getpowerlinefonts="git clone https://github.com/powerline/fonts.git & cd fonts & ./install.sh & cd .. & remove fonts"
+
 # Git stuff
 # Git alias example in terminal
 # git config --global alias.s status 
@@ -109,7 +116,7 @@ alias htmlstart="cp ~/profiles/index.html ."
 alias desk="cd ~/Desktop"
 alias restart="sudo shutdown -r now"
 alias getname="scutil --get $@"
-alias sub="sublime $@"
+alias sub="subl $@"
 alias remindLoop="echo 'for i in {1..10}; do touch test${i}.txt; done'"
 alias clean="remove ~/Desktop/*.png"
 

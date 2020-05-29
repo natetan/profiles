@@ -181,6 +181,14 @@ alias sub="sublime $@"
 alias remindLoop="echo 'for i in {1..10}; do touch test${i}.txt; done'"
 alias clean="remove ~/Desktop/*.png"
 alias ads="azuredatastudio $@"
+alias sleep="pmset sleepnow"
+
+# Schedule a sleep in x minutes
+function sleep-in() {
+	local minutes=$1
+	local datetime=`date -v+${minutes}M +"%m/%d/%y %H:%M:%S"`
+	pmset schedule sleep "$datetime"
+}
 
 # Vim
 alias fixvimplugins="git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugin/Vundle.vim"

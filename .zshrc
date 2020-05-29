@@ -63,7 +63,7 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+	git
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -115,10 +115,10 @@ alias getpowerlinefonts="git clone https://github.com/powerline/fonts.git & cd f
 
 # Git stuff
 # Git alias example in terminal
-# git config --global alias.s status 
-	# this means git s = git status
+# git config --global alias.s status
+# this means git s = git status
 # git config --global alias.civ commit -v
-	# this means git civ = git commit -v
+# this means git civ = git commit -v
 alias init="git init"
 alias pull="git pull origin $@"
 alias push="git push origin $@"
@@ -181,13 +181,19 @@ alias sub="sublime $@"
 alias remindLoop="echo 'for i in {1..10}; do touch test${i}.txt; done'"
 alias clean="remove ~/Desktop/*.png"
 alias ads="azuredatastudio $@"
-alias sleep="pmset sleepnow"
+alias closelid="pmset sleepnow"
 
 # Schedule a sleep in x minutes
-function sleep-in() {
+function sleepin() {
 	local minutes=$1
-	local datetime=`date -v+${minutes}M +"%m/%d/%y %H:%M:%S"`
-	pmset schedule sleep "$datetime"
+	local datetime=$(date -v+${minutes}M +"%m/%d/%y %H:%M:%S")
+	sudo pmset schedule sleep "$datetime"
+}
+
+# Make a directory and then step into it
+mcd() {
+	mkdir -p $1
+	cd $1
 }
 
 # Vim
@@ -203,10 +209,7 @@ alias pullbamboo="scp -r bgadmin@bamboo-garden.co:/home/bgadmin/bamboogarden.net
 alias pushbamboo="scp -r ~/bamboogarden.net bgadmin@bamboo-garden.co:/home/bgadmin"
 alias sbamboo="ssh bgadmin@bamboo-garden.co"
 
-
-
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv >/dev/null; then eval "$(rbenv init -)"; fi
 export PATH=$PATH:/Users/nate/Library/Android/sdk/platform-tools/
 eval $(/usr/libexec/path_helper -s)
 

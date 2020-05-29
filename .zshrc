@@ -2,7 +2,11 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/yulong/.oh-my-zsh
+export ZSH=/Users/nate/.oh-my-zsh
+
+export TERM=xterm-256color
+
+# VS
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -128,8 +132,8 @@ alias commitall="git commit -am "$@""
 alias remote="git remote -v"
 alias addo="echo 'git remote add origin' & git remote add origin $@"
 alias seto="echo 'git remote set-url origin' & git remote set-url origin $@"
-alias gitemail="echo 'git config --global user.email' && git config --global user.email yulongtan67@gmail.com"
-alias gitname="echo 'git config --global user.name' && git config --global user.name 'Yulong Tan'"
+alias gitemail="echo 'git config --global user.email' && git config --global user.email $@"
+alias gitname="echo 'git config --global user.name' && git config --global user.name '$@'"
 
 # Quality of Life
 alias sbash="source ~/.bash_profile"
@@ -138,7 +142,8 @@ alias vhistory="vim ~/.bash_history"
 alias vvim="vim ~/.vimrc"
 alias up="cd .."
 alias prev="cd -"
-alias copy="clip <$@"
+alias copy="pbcopy < $@"
+alias paste="pbpaste > $@"
 alias save="cp ~/.bash_profile ~/profiles/"
 alias update="cp ~/profiles/.bash_profile ~"
 alias savevimrc="cp ~/.vimrc ~/profiles"
@@ -172,9 +177,10 @@ alias htmlstart="cp ~/profiles/index.html ."
 alias desk="cd ~/Desktop"
 alias restart="sudo shutdown -r now"
 alias getname="scutil --get $@"
-alias sub="subl $@"
+alias sub="sublime $@"
 alias remindLoop="echo 'for i in {1..10}; do touch test${i}.txt; done'"
 alias clean="remove ~/Desktop/*.png"
+alias ads="azuredatastudio $@"
 
 # Vim
 alias fixvimplugins="git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugin/Vundle.vim"
@@ -185,15 +191,15 @@ alias plugs="vim +PluginInstall qall"
 alias grade="cat ~/uw/uwgrades.csv | grep -i "$@""
 
 # bg
-alias updatebamboo="scp -r bgadmin@bamboo-garden.co:/home/bgadmin/bamboogarden.net ~"
-alias savebamboo="scp -r ~/bamboogarden.net bgadmin@bamboo-garden.co:/home/bgadmin"
+alias pullbamboo="scp -r bgadmin@bamboo-garden.co:/home/bgadmin/bamboogarden.net ~"
+alias pushbamboo="scp -r ~/bamboogarden.net bgadmin@bamboo-garden.co:/home/bgadmin"
 alias sbamboo="ssh bgadmin@bamboo-garden.co"
 
 
 
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-export PATH=$PATH:/Users/yulong/Library/Android/sdk/platform-tools/
+export PATH=$PATH:/Users/nate/Library/Android/sdk/platform-tools/
 eval $(/usr/libexec/path_helper -s)
 
 # Setting PATH for Python 3.6
@@ -202,4 +208,4 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
 
 # added by Anaconda3 5.0.1 installer
-export PATH="/Users/yulong/anaconda3/bin:$PATH"
+export PATH="/Users/nate/anaconda3/bin:$PATH"
